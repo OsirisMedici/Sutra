@@ -2,6 +2,10 @@
 
 Development home for UI and interaction improvements to VedAnvaya. See [START_HERE.md](START_HERE.md) for setup, deployment, and the next session. Original project documentation follows.
 
+[Open the public app](https://swim-shopzilla-dns-authentication.trycloudflare.com)
+
+No Tailscale or account is needed. Cloudflare forwards requests over an outgoing tunnel from the VPS to the app. The free sharing URL changes if the tunnel restarts. See [how public access works](START_HERE.md#public-access-without-tailscale).
+
 ---
 
 <div align="center">

@@ -19,6 +19,20 @@ The current frontend uses the upstream public API at `https://vedagraph-api.onre
 
 For a self-contained backend, follow LOCAL_SETUP.md. The repository excludes the populated corpus database and dump; an empty Neo4j installation will not make corpus browsing work.
 
+## Public access without Tailscale
+
+Anyone with the public app link can open Sutra in a browser without Tailscale or an account.
+
+Requests follow this path:
+
+```text
+Visitor -> Cloudflare public HTTPS link -> outgoing tunnel to the VPS -> Sutra
+```
+
+The VPS maintains an outgoing connection to Cloudflare. Cloudflare forwards public requests through that connection to the running app. Visitors do not need direct network access to the VPS. The tunnel exposes the app, not the private Tailscale network.
+
+This uses a free Cloudflare Quick Tunnel. The URL changes if the tunnel process restarts, and the app must remain running on the VPS. A permanent domain with a named tunnel would provide a stable address. The existing Tailscale link is a separate way to reach the same app.
+
 ## Current deployment
 
 The VPS serves the production build under the user service `sutra-web`. A free Cloudflare Quick Tunnel provides public HTTPS through `sutra-public`.
