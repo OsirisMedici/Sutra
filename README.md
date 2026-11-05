@@ -1,3 +1,9 @@
+# Sutra
+
+Development home for UI and interaction improvements to VedAnvaya. See [START_HERE.md](START_HERE.md) for setup, deployment, and the next session. Original project documentation follows.
+
+---
+
 <div align="center">
 
 <img src="frontend/public/brand/icon-512.png" alt="The Anvaya Thread, VedAnvaya's mark: a diamond on a ruled line between two mirrored strokes" width="92" height="92">
